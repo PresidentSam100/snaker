@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://vh6bdtlm7lve"]
+
+[ext_resource type="PackedScene" uid="uid://bgvgv00nkva5v" path="res://components/obstacle.tscn" id="1_vj1ox"]
+[ext_resource type="PackedScene" uid="uid://c8j7mxxvdsagi" path="res://components/snake_head.tscn" id="2_gx6an"]
+[ext_resource type="AudioStream" uid="uid://c52l5vxasjh38" path="res://sounds/snaketheme.mp3" id="3_7o3eu"]
+
+[node name="Interior" type="Node2D"]
+
+[node name="Obstacle1" parent="." instance=ExtResource("1_vj1ox")]
+modulate = Color(0.909804, 0.0823529, 0.0823529, 1)
+position = Vector2(294, 188)
+rotation = 160.764
+
+[node name="Obstacle2" parent="." instance=ExtResource("1_vj1ox")]
+modulate = Color(0.553227, 0.0736, 0.92, 1)
+position = Vector2(566, 492)
+rotation = 160.764
+
+[node name="Obstacle3" parent="." instance=ExtResource("1_vj1ox")]
+modulate = Color(0.921569, 0.0745098, 0.596078, 1)
+position = Vector2(912, 272)
+rotation = 160.764
+
+[node name="SnakeHead" parent="." instance=ExtResource("2_gx6an")]
+position = Vector2(585, 238)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_7o3eu")
+autoplay = true
